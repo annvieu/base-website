@@ -35,15 +35,24 @@ body {
 }
 
 h2 {
-    font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase; /* Заголовки в верхнем регистре */
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
     line-height: 1;
+    letter-spacing: -0.02em;
 }
 
-p, a {
-    font-size: 22px;
-    line-height: 1.4;
+p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+} 
+
+a {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .btn {
@@ -164,13 +173,14 @@ p, a {
 .studio-content { display: flex;
     flex-direction: column;
     justify-content: space-between; }
-.studio-content h3 { font-size: 24px; text-transform: uppercase; }
+.studio-content h3 { font-size: 24px; text-transform: uppercase; padding-bottom: 10px;}
 .arrow-icon { width: 47.62px; height: 47.62px; align-self: flex-start; padding: 0;}
 
 /* 9. Подбери материалы */
 .section-materials { padding-top: 132px; }
 .mat-title { grid-column: 3 / 11; padding-bottom: 52px; }
 .mat-info { grid-column: 5 / 11; padding-bottom: 32px;}
+.mat-info p { width: 55%; }
 .mat-info .btn { width: 100%; margin-top: 20px;} /* Кнопка в одну колонку */
 
 .mat-visual-grid {
@@ -202,26 +212,36 @@ p, a {
 .f-3 { grid-column: 3; display: inline-flex; width: fit-content; height: fit-content; font-weight: bold; text-decoration: none; color: #000; align-self: center; }
 .f-8 { grid-column: 8 / 10; display: inline-flex; width: fit-content; height: fit-content; text-decoration: none; color: #000; align-self: center; }
 .f-10 { grid-column: 10; align-self: center; }
-
+.f-8, .f-10 { font-size: 16px; opacity: 0.6; }
 
 /* =============================================
-   АДАПТИВ: ПЛАНШЕТЫ (1345px - 940px)
+   АДАПТИВ: ПЛАНШЕТЫ (1120px - 800px)
    ============================================= */
-@media (max-width: 1345px) {
+@media (max-width: 1280px) {
     .grid-container {
         column-gap: 10px; /* Уменьшаем отступы, чтобы избежать "белой полосы" */
     }
-    p, a {
-        font-size: 16px;
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: normal;
+    } 
+
+    a {
+        font-size: 12px;
     }
     .studio-img-wrapper { flex: 0 0 240px; height: 240px; }
     .hero-content { grid-column: 6 / 11; }
+    .f-8, .f-10 { font-size: 12px; }
 }
 
 /* =============================================
-   АДАПТИВ: ТЕЛЕФОНЫ (940px - iPhone)
+   АДАПТИВ: ТЕЛЕФОНЫ (800px - iPhone)
    ============================================= */
-@media (max-width: 940px) {
+@media (max-width: 800px) {
     /* Переключение на 8 колонок */
     .grid-container {
         grid-template-columns: repeat(8, 1fr);
@@ -231,8 +251,17 @@ p, a {
     .btn-desktop { display: none; }
     .btn-mobile { display: inline-block; }
 
-    h2 { font-size: 24px; margin-bottom: 24px; }
-    p, a { font-size: 15px; }
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 13px;
+    } 
+
+    a {
+        font-size: 12px;
+    }
 
     /* Отступы секций на мобильном */
     .section-style, .section-trends, .join-section, .section-studios, .section-materials, .footer {
@@ -285,9 +314,13 @@ p, a {
     .studios-grid { 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px; 
+        gap: 10px; 
         align-items: center;
         grid-column: 1 / -1; 
+    }
+
+    .studio-item {
+        gap: 0px;
     }
 
     .studio-item { 
@@ -365,5 +398,5 @@ p, a {
     .f-1 { grid-column: 1 / 2; }
     .f-2, .f-8  { grid-column: 3 / 5; align-self: flex-start;}
     .f-3, .f-10 { grid-column: 6 / 9; align-self: flex-start;}
-    .f-8, .f-10 { opacity: 0.6; }
+    .f-8, .f-10 { font-size: 10px; }
 }
