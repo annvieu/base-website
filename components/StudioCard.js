@@ -17,7 +17,7 @@ export class StudioCard extends HTMLElement {
                         <p>${desc}</p>
                     </div>
                     <a href="${link}" class="arrow-icon" target="_blank">
-                        <img src="icons/arrow-icon.svg" alt="arrow-icon">
+                        <img src="/icons/arrow-icon.svg" alt="arrow-icon">
                     </a>
                 </div>
             </div>
