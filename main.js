@@ -8,6 +8,17 @@ import { StudiosSection } from './components/StudiosSection.js';
 import { MaterialsSection } from './components/MaterialsSection.js';
 import { AppFooter } from './components/AppFooter.js';
 
+const rootPath = new URL('.', import.meta.url).pathname;
+
+/**
+ * Функция для получения правильного пути к ассетам и страницам
+ * @param {string} path - путь от корня проекта (например, 'images/logo.svg')
+ */
+export const getPath = (path) => {
+    // Убираем лишние слеши в начале и склеиваем с корнем
+    return (rootPath + path.replace(/^\//, '')).replace(/\/+/g, '/');
+};
+
 const components = {
     'app-header': AppHeader,
     'hero-section': HeroSection,
