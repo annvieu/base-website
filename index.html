@@ -5,166 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base Desktop</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
 </head>
 <body>
 
-    <header class="header">
-        <div class="grid-container">
-            <a href="#" class="nav-item-1">
-                <img src="icons/logo.svg" alt="BASE LOGO">
-            </a>
-            <a href="#" class="nav-item-2">уроки</a>
-            <a href="#" class="nav-item-3">тренды</a>
-            <a href="#" class="nav-item-4">студии</a>
-            <a href="#" class="nav-item-5">бот</a>
-        </div>
-    </header>
+    <!-- Шапка сайта -->
+    <app-header></app-header>
 
-    <section class="hero">
-        <div class="grid-container" style="width: 100%;">
-            <div class="hero-content">
-                <p>наша платформа – это пространство для тех, кто хочет создавать уникальные вещи своими руками</p>
-                <a href="#" class="btn btn-desktop">каталог уроков</a>
-                <a href="#" class="btn btn-mobile">к урокам</a>
-            </div>
-        </div>
-    </section>
+    <!-- Главный блок -->
+    <hero-section></hero-section>
 
-    <section class="section-style">
-        <div class="grid-container">
-            <img src="images/create_style.jpg" class="style-img" alt="">
-            <h2 class="style-title">СОЗДАВАЙ СВОЙ СТИЛЬ</h2>
-            <div class="style-desc">
-                <p>хочешь сделать свою одежду уникальной? на  платформе собраны простые и понятные уроки по кастому – от простых техник до профессиональных приемов. учись и выделяйся вместе с нами</p>
-                <a href="#" class="btn">к урокам</a>
-            </div>
-        </div>
-    </section>
+    <!-- Секция стиля -->
+    <style-section></style-section>
 
-    <section class="section-trends">
-        <div class="grid-container">
-            <h2 class="trends-title">ВДОХНОВИСЬ ТРЕНДАМИ</h2>
-            <p class="trends-text">собрали самые свежие тенденции в мире кастомизации. Узнай, что сейчас модно и как применить новые идеи, чтобы сделать свой стиль уникальным и современным</p>
-            
-            <div class="trends-visual-grid">
-                <img src="images/trend1.jpg" class="tr-img tr-1">
-                <img src="images/trend2.jpg" class="tr-img tr-2">
-                <img src="images/yellow-sweater.jpg" class="tr-img tr-big">
-                <img src="images/trend3.jpg" class="tr-img tr-3">
-                <img src="images/trend4.jpg" class="tr-img tr-4">
-            </div>
-        </div>
-    </section>
+    <!-- Секция трендов (картинки подгрузятся из utils/data.js) -->
+    <trends-section></trends-section>
 
-    <section class="join-section">
-        <div class="grid-container">
-            <img src="images/wall.jpg" class="join-image">
-            <h2 class="join-title">ПРИСОЕДИНЯЙСЯ К НАМ</h2>
-            <div class="join-info">
-                <p>telegram-канал с горячими трендами, подборками новых коллекций для вдохновения и для общения в тусовке</p>
-                <a href="https://t.me/nobases" class="tg-link">
-                    <img src="icons/tg-icon.svg" alt="tg-icon">
-                    @nobases
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Секция призыва к действию -->
+    <join-section></join-section>
 
-    <section class="section-studios">
-        <div class="grid-container">
-            <h2 class="studios-title">ЗАКАЖИ У ПРОФЕССИОНАЛОВ</h2>
-            <div class="studios-grid">
-                <div class="studio-item">
-                    <div class="studio-img-wrapper"><img src="images/sw-logo.png" class="studio-img"></div>
-                    <div class="studio-content">
-                        <div>
-                            <h3>Street Wave</h3>
-                            <p>первая в России студия арт-кастомизации, объединившая стильных и талантливых художников. каждый предмет - объект исскуства</p>
-                        </div>
-                        <a href="https://street-wave.com/" class="arrow-icon">
-                            <img src="icons/arrow-icon.svg" alt="arrow-icon">
-                        </a>
-                    </div>
-                </div>
+    <!-- Секция студий (карточки сгенерируются автоматически из данных) -->
+    <studios-section></studios-section>
 
-                <div class="studio-item">
-                    <div class="studio-img-wrapper"><img src="images/syyr-logo.png" class="studio-img dark"></div>
-                    <div class="studio-content">
-                        <div>
-                            <h3>SYYR</h3>
-                            <p>cтудия создаёт уникальную одежду 
-    из переработанных тканей и текстильного сырья, превращая винтажные материалы в шик</p>
-                        </div>
-                        <a href="https://vk.com/zelenyy_syr" class="arrow-icon">
-                            <img src="icons/arrow-icon.svg" alt="arrow-icon">
-                        </a>
-                    </div>
-                </div>
+    <!-- Секция материалов (визуальная сетка из data.js) -->
+    <materials-section></materials-section>
 
-                <div class="studio-item"></div>
-
-                <div class="studio-item">
-                    <div class="studio-img-wrapper"><img src="images/bugera-logo.png" class="studio-img"></div>
-                    <div class="studio-content">
-                        <div>
-                            <h3>BUGERA</h3>
-                            <p>устойчивый апсайкл-бренд, который транслирует современные ценности и тренды. Осознанность как уважение к настоящему моменту</p>
-                        </div>
-                        <a href="https://bugera.moscow/" class="arrow-icon">
-                            <img src="icons/arrow-icon.svg" alt="arrow-icon">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="studio-item">
-                    <div class="studio-img-wrapper"><img src="images/nao-logo.png" class="studio-img dark"></div>
-                    <div class="studio-content">
-                        <div>
-                            <h3>NAOMAKES</h3>
-                            <p>Студия создаёт уникальную одежду в технике апсайклинга, превращая винтажные и переработанные материалы в выразительные вещи</p>
-                        </div>
-                        <a href="https://naomakes.ru/" class="arrow-icon">
-                            <img src="icons/arrow-icon.svg" alt="arrow-icon">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-materials">
-        <div class="grid-container">
-            <h2 class="mat-title">ПОДБЕРИ МАТЕРИАЛЫ</h2>
-            <div class="mat-info">
-                <p>наш чат-бот подскажет необходимую информацию о материалах для вашего проекта и поможет выбрать оптимальные варианты</p>
-                <div style="display: grid; grid-template-columns: repeat(6, 1fr);">
-                    <a href="#" class="btn" style="grid-column: 1;">в чат-бот</a>
-                </div>
-            </div>
-
-            <div class="mat-visual-grid">
-                <img src="images/big-mat.jpg" class="mat-big">
-                <img src="images/m1.jpg" class="m-s ms-1">
-                <img src="images/m2.jpg" class="m-s ms-2">
-                <img src="images/m3.jpg" class="m-s ms-3">
-                <img src="images/m4.jpg" class="m-s ms-4">
-                <img src="images/m5.jpg" class="m-s ms-5">
-                <img src="images/m6.jpg" class="m-s ms-6">
-                <img src="images/m7.jpg" class="m-s ms-7">
-                <img src="images/m8.jpg" class="m-s ms-8">
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="grid-container">
-            <a href="https://t.me/nobases" class="f-1"><img src="icons/tg-icon.svg" width="47"></a>
-            <a href="#" class="f-2">связаться</a>
-            <a href="#" class="f-3">о проекте</a>
-            <a href="#" class="f-8">правовая информация</a>
-            <p class="f-10">© no base 2025</p>
-        </div>
-    </footer>
+    <!-- Подвал сайта -->
+    <app-footer></app-footer>
 
 </body>
 </html>
