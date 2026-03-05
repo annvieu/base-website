@@ -12,9 +12,7 @@ export class MaterialsSection extends HTMLElement {
                     <h2 class="mat-title">ПОДБЕРИ МАТЕРИАЛЫ</h2>
                     <div class="mat-info">
                         <p>Наш чат-бот подскажет необходимую информацию о материалах для вашего проекта и поможет выбрать оптимальные варианты</p>
-                        <div style="display: grid; grid-template-columns: repeat(6, 1fr);">
-                            <a href="#" class="btn" style="grid-column: 1;">в чат-бот</a>
-                        </div>
+                        <a href="#" class="btn">в чат-бот</a>
                     </div>
                     <div class="mat-visual-grid">${imagesHTML}</div>
                 </div>

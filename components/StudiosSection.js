@@ -5,7 +5,7 @@ export class StudiosSection extends HTMLElement {
         const title = this.getAttribute('title') || 'ЗАКАЖИ У ПРОФЕССИОНАЛОВ';
         const source = this.getAttribute('data-source');
         
-        // Выбираем массив данных в зависимости от атрибута
+        const titleStyle = (source === 'full') ? "main-title" : "studios-title";
         const data = (source === 'full') ? fullStudios : mainStudios;
 
         const cardsHTML = data.map(studio => {
@@ -24,7 +24,7 @@ export class StudiosSection extends HTMLElement {
         this.innerHTML = `
             <section class="section-studios">
                 <div class="grid-container">
-                    <h2 class="studios-title">${title}</h2>
+                    <h2 class="${titleStyle}">${title}</h2>
                     <div class="studios-grid">
                         ${cardsHTML}
                     </div>
