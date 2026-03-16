@@ -291,6 +291,170 @@ a {
     color: #ffffff;
 }
 
+/* Делаем курсор-поинтер для карточки, чтобы было понятно, что она кликабельна */
+.studio-item {
+    cursor: pointer;
+}
+
+/* Отключаем скроллбар в окне */
+.studio-modal-content {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.studio-modal-content::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+}
+
+/* Фон (Overlay) */
+.studio-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+/* Контейнер окна */
+.studio-modal-content {
+    width: 100%;
+    background: #fff;
+    max-width: 980px;
+    height: 95vh;
+    position: relative;
+    overflow-y: auto;
+    display: grid;
+    /* Десктопная сетка: 7 колонок */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+/* Кнопка закрытия с отступом */
+.modal-close-btn {
+    position: absolute;
+    /* Теперь она не прижата к углу */
+    top: 20px; 
+    right: 20px;
+    width: 47px;
+    height: 47px;
+    background: #EEEEEE;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+/* Левая часть (3 колонки) */
+.modal-left {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-logo-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.modal-logo-wrapper.dark img {
+    filter: none;
+}
+
+.modal-left h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 auto 0; /* Отталкивает контакты вниз */
+}
+
+.modal-info-footer {
+    margin-top: 40px;
+}
+
+.modal-contacts {
+    margin-bottom: 20px;
+}
+
+.modal-contacts p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+.modal-contacts a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+.modal-external-link {
+    width: 50px;
+    height: 50px;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Правая часть (4 колонки) */
+.modal-right {
+    grid-column: span 4;
+}
+
+.modal-right h3 {
+    font-size: 36px;
+    margin: 0 0 24px 0;
+}
+
+.portfolio-grid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/* Эффект наведения только если внутри компонента studio-card */
+studio-card .studio-item {
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Например */
+}
+
+studio-card .studio-item:hover {
+    transform: translateY(-5px); /* Твой эффект наведения */
+}
+
+/* Пустая карточка в сетке останется просто блоком без курсора и эффектов */
+div.studio-item {
+    cursor: default;
+}
+
 /* =============================================
    АДАПТИВ: ПЛАНШЕТЫ (1024px - 800px)
    ============================================= */
@@ -337,6 +501,36 @@ a {
     .about-why.dark-section {
         padding: 44px 101px;
         margin: 108px 0 0;
+    }
+
+    .studio-modal-content {
+        max-width: 725px;
+        height: 75vh;  
+    }
+    .modal-close-btn {
+        width: 43px;
+        height: 43px;
+    }
+    .modal-external-link {
+        width: 43px;
+        height: 43px;
+    }
+    .modal-left h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+    .modal-contacts p {
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: -0.02em;
+    }
+    .modal-contacts a {
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: -0.02em;
     }
 }
 
@@ -555,4 +749,55 @@ a {
     .f-2, .f-8  { grid-column: 3 / 5; align-self: flex-start;}
     .f-3, .f-10 { grid-column: 6 / 9; align-self: flex-start;}
     .f-8, .f-10 { font-size: 10px; }
+
+    .studio-modal-content {
+        max-width: 500px;
+        
+        height: 94vh;  
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 10px;
+        display: flex; /* Переключаем на поток для мобилки */
+        flex-direction: column;
+        padding: 10px 10px 10px 10px;
+    }
+    .modal-left h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+    .modal-contacts p {
+        font-size: 12px;
+    }
+    .modal-contacts a {
+        font-size: 12px;
+    }
+    .modal-contacts {
+        padding-top: 10px;
+    }
+    .modal-close-btn {
+        top: 10px; 
+        right: 10px;
+        width: 38px;
+        height: 38px;
+    }
+    .modal-external-link {
+        width: 38px;
+        height: 38px;
+    }
+    .modal-left, .modal-right {
+        grid-column: span 8;
+        width: 100%;
+    }
+    .studio-modal-overlay {
+        padding: 46px
+    }
+    .modal-info-footer {
+        margin-top: 24px;
+        order: 3; /* Контакты в самый низ */
+    }
+    .empty-slot {
+        display: none; /* Они больше не занимают место */
+    }
 }
