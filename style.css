@@ -565,7 +565,8 @@ div.studio-item {
     background: #fff;
     overflow: hidden;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform;
 }
 
 .time-text{
@@ -714,7 +715,7 @@ div.studio-item {
 /* ============================================= */
 
 .article-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(0.96);
 }
 
 /* =============================================
