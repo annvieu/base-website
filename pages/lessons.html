@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уроки — Base</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../main.js" defer></script>
+</head>
+<body>
+
+    <app-header theme="dark"></app-header>
+
+    <main class="lessons-page">
+        <aside class="lessons-sidebar">
+            <h2 class="main-title">УРОКИ</h2>
+            <ul class="lessons-filters">
+                <li class="active">все</li>
+                <li class="filter-item novice">
+                    <span class="checkbox"></span> для новичков
+                </li>
+                <li class="filter-item pro">
+                    <span class="checkbox"></span> для продвинутых
+                </li>
+            </ul>
+        </aside>
+
+        <div class="lessons-content">
+            <articles-section></articles-section>
+        </div>
+    </main>
+
+    <app-footer></app-footer>
+
+</body>
+</html>

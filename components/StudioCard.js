@@ -29,7 +29,6 @@ export class StudioCard extends HTMLElement {
         this.querySelector('.studio-item').addEventListener('click', (e) => {
             if (e.target.closest('.external-link')) return; 
             
-            // Ищем полные данные в fullStudios
             const fullData = fullStudios.find(s => s.title === title) || {};
             
             openStudioModal({
@@ -38,8 +37,8 @@ export class StudioCard extends HTMLElement {
                 isDark, 
                 link: fullData.link || link,
                 city: fullData.city || 'санкт-петербург',
-                email: fullData.email, // Могут быть undefined
-                phone: fullData.phone, // Добавляем новое поле
+                email: fullData.email,
+                phone: fullData.phone,
                 website: fullData.website || 'ogcustom.ru',
                 portfolio: fullData.portfolio || []
             });
@@ -51,11 +50,9 @@ function openStudioModal(data) {
     const overlay = document.createElement('div');
     overlay.className = 'studio-modal-overlay';
 
-    // Формируем HTML для контактов только если данные есть
     const emailHTML = data.email ? `<p><a href="mailto:${data.email}">${data.email}</a></p>` : '';
     const phoneHTML = data.phone ? `<p><a href="tel:${data.phone.replace(/\s+/g, '')}">${data.phone}</a></p>` : '';
 
-    // Та же шахматная логика для 6 слотов
     const portfolioSlots = [
         data.portfolio[0], null, null, 
         data.portfolio[1], data.portfolio[2], data.portfolio[3]

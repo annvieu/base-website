@@ -296,3 +296,29 @@ export const materialsImages = [
     { src: 'images/m7.jpg', class: 'ms-7' },
     { src: 'images/m8.jpg', class: 'ms-8' }
 ];
+
+export const articlesData = {
+    articles: [
+        { title: "ВЫШИВКА НА ОДЕЖДЕ", time: "7", img: "images/lessons/embroidery.png", level: "novice", layout: "horizontal", columnSpan: 4 },
+        {},
+        { title: "ОСНОВЫ ТАЙ-ДАЙ", time: "7", img: "images/lessons/tiedye.png", level: "novice", layout: "horizontal", columnSpan: 4 },
+        {},
+        {},
+        { title: "СОЗДАНИЕ АВТОРСКИХ ЦЕПЕЙ И ВСТАВОК", time: "9", img: "images/lessons/chains.png", level: "pro", layout: "vertical", columnSpan: 6 },
+        { title: "ИСПОЛЬЗОВАНИЕ МАРКЕРОВ ДЛЯ ТКАНИ", time: "5", img: "images/lessons/markers.png", level: "novice", layout: "horizontal", columnSpan: 4 },
+        { title: "ИСПОЛЬЗОВАНИЕ МЕТАЛЛИЧЕСКИХ ФУРНИТУР", time: "9", img: "images/lessons/metal.png", level: "pro", layout: "horizontal", columnSpan: 4 },
+        {},
+        { title: "ПРИМЕНЕНИЕ ПАТЧЕЙ", time: "6", img: "images/lessons/patches.png", level: "novice", layout: "horizontal", columnSpan: 4 },
+        { title: "РАБОТА С НЕСТАНДАРТНЫМИ МАТЕРИАЛАМИ", time: "8", img: "images/lessons/raincoat.png", level: "pro", layout: "vertical", columnSpan: 6 },
+        {},
+        {},
+        { title: "РАСКРАШИВАЕМ БАЛЛОНЧИКОМ", time: "8", img: "images/lessons/balloon.png", level: "novice", layout: "horizontal", columnSpan: 4 },
+        { title: "ИНКРУСТАЦИЯ ТКАНИ КРИСТАЛЛАМИ И КАМНЯМИ", time: "11", img: "images/lessons/studs.png", level: "pro", layout: "horizontal", columnSpan: 4 },
+        {},
+        { title: "КОМБИНИРОВАНИЕ ТЕКСТУР И МАТЕРИАЛОВ", time: "9", img: "images/lessons/textures.png", level: "pro", layout: "horizontal", columnSpan: 4 },
+        {},
+        {},
+        { title: "ПРОСТАЯ РОСПИСЬ ПО ТКАНИ КИСТЬЮ", time: "7", img: "images/lessons/denim.png", level: "novice", layout: "vertical", columnSpan: 6 },
+        { title: "СОЗДАНИЕ СЪЕМНЫХ ЭЛЕМЕНТОВ", time: "8", img: "images/lessons/hoodie.png", level: "pro", layout: "horizontal", columnSpan: 4 }
+    ]
+};

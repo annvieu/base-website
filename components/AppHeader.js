@@ -14,7 +14,7 @@ export class AppHeader extends HTMLElement {
                     <a href="${getPath('index.html')}" class="nav-item-1">
                         <img src="${getPath(logoSrc)}" alt="BASE LOGO">
                     </a>
-                    <a href="#" class="nav-item-2">уроки</a>
+                    <a href="${getPath('pages/lessons.html')}" class="nav-item-2">уроки</a>
                     <a href="${getPath('pages/trends.html')}" class="nav-item-3">тренды</a>
                     <a href="${getPath('pages/studios.html')}" class="nav-item-4">студии</a>
                     <a href="#" class="nav-item-5">бот</a>

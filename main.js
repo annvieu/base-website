@@ -7,6 +7,9 @@ import { StudioCard } from './components/StudioCard.js';
 import { StudiosSection } from './components/StudiosSection.js';
 import { MaterialsSection } from './components/MaterialsSection.js';
 import { AppFooter } from './components/AppFooter.js';
+import { ArticleCard } from './components/ArticleCard.js'
+import { ArticlesSection } from './components/ArticlesSection.js'
+
 
 const rootPath = new URL('.', import.meta.url).pathname;
 
@@ -28,7 +31,9 @@ const components = {
     'studio-card': StudioCard,
     'studios-section': StudiosSection,
     'materials-section': MaterialsSection,
-    'app-footer': AppFooter
+    'app-footer': AppFooter,
+    'articles-section': ArticlesSection,
+    'article-card': ArticleCard,
 };
 
 Object.entries(components).forEach(([tagName, componentClass]) => {
