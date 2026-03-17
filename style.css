@@ -443,11 +443,11 @@ a {
 /* Эффект наведения только если внутри компонента studio-card */
 studio-card .studio-item {
     cursor: pointer;
-    transition: transform 0.2s ease; /* Например */
+    transition: transform 0.2s ease;
 }
 
 studio-card .studio-item:hover {
-    transform: translateY(-5px); /* Твой эффект наведения */
+    transform: translateY(-5px);
 }
 
 /* Пустая карточка в сетке останется просто блоком без курсора и эффектов */
@@ -564,7 +564,8 @@ div.studio-item {
     gap: 20px;
     background: #fff;
     overflow: hidden;
-    height: auto;                       /* естественная высота */
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .time-text{
@@ -713,8 +714,7 @@ div.studio-item {
 /* ============================================= */
 
 .article-card:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.3s ease;
+    transform: translateY(-5px);
 }
 
 /* =============================================
