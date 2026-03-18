@@ -10,7 +10,7 @@ import { AppFooter } from './components/AppFooter.js';
 import { ArticleCard } from './components/ArticleCard.js'
 import { ArticlesSection } from './components/ArticlesSection.js'
 
-import { articlesData } from '../utils/data.js';
+import { articlesData } from './utils/data.js';
 
 
 const rootPath = new URL('.', import.meta.url).pathname;
