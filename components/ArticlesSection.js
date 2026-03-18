@@ -42,6 +42,7 @@ export class ArticlesSection extends HTMLElement {
 
         const generateCard = (article) => `
             <article-card 
+                id="${article.id || ''}"
                 title="${article.title || ''}" 
                 time="${article.time || ''}" 
                 img="${article.img || ''}" 

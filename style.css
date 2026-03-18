@@ -718,6 +718,288 @@ div.studio-item {
     transform: translateY(-8px) scale(0.96);
 }
 
+/* Структура страницы статьи */
+.single-article-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.breadcrumbs {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.breadcrumbs a {
+    color: #FF00FF;
+    text-decoration: none;
+}
+
+.article-hero-header {
+    margin-bottom: 40px;
+}
+
+.article-hero-header .article-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.article-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+/* Секция материалов */
+.materials-section {
+    margin-bottom: 60px;
+}
+
+.materials-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.materials-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.material-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(20% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-4px);
+    border-color: #FF00FF;
+}
+
+.material-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #000;
+    border: 1px solid #FF00FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Дополнения для корректного отображения карточек (было полностью отсутствовало) */
+.material-icon-wrapper img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* для SVG-иконок — белый цвет */
+}
+
+.material-card p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Текст статьи */
+.article-body h3 {
+    color: #FF00FF;
+    margin: 40px 0 20px;
+    font-size: 22px;
+}
+
+.article-body p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.article-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/*----------*/
+
+/* --- ОСНОВНАЯ СЕТКА (10 КОЛОНОК) --- */
+.article-page {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 20px;
+    row-gap: 80px; /* Отступы между логическими блоками по вертикали */
+    max-width: 100%;
+    padding: 0px 1.3%;
+    align-items: start;
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    padding: 0 0 20px 0;
+}
+
+.tag-novice {
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+/* --- ВЕРХНИЙ БЛОК (HERO) --- */
+.hero-header {
+    grid-column: 1 / 6;    /* С 1 по 5 колонку */
+    grid-row: 1;
+}
+
+.hero-image {
+    grid-column: 7 / 11;   /* Последние 4 колонки: 7, 8, 9, 10 */
+    grid-row: 1 / 3;       /* Тянется вниз, чтобы стоять рядом с заголовком и инструментами */
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-tools {
+    grid-column: 1 / 6;    /* Инструменты занимают с 1 по 5 колонку */
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Ровно 5 колонок внутри, каждая под свой инструмент */
+    gap: 20px;
+    align-self: end;
+}
+.tool-card {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.tool-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.hero-intro {
+    grid-column: 6 / 11;   /* Текст начинается с 6 колонки по 10 */
+    grid-row: 3;
+    padding-top: 40px;
+}
+
+/* --- СТАНДАРТНЫЙ БЛОК КОНТЕНТА --- */
+.content-image {
+    grid-column: 1 / 6;    /* Картинки слева: 1-5 колонки */
+}
+.content-image img {
+    width: 100%;
+    display: block;
+}
+
+.content-text {
+    grid-column: 6 / 11;   /* Текст справа: 6-10 колонки */
+}
+.content-text p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* --- БЛОК: СОВЕТ --- */
+.advice-title {
+    grid-column: 2 / 3;    /* Заголовок "Совет" строго во 2 колонке */
+}
+.advice-text {
+    grid-column: 3 / 8;    /* Текст начинается с 3 колонки (занял примерно до 7-8) */
+}
+
+/* --- БЛОК: ТИПИЧНЫЕ ОШИБКИ (Черный фон) --- */
+.errors-block {
+    grid-column: 1 / 11;   /* Растягиваем на все 10 колонок */
+    background: #000;
+    color: #fff;
+    padding: 60px 0;
+    
+    /* Создаем такую же 10-колоночную сетку внутри черного блока */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 20px;
+}
+.errors-title {
+    grid-column: 2 / 3;    /* Заголовок во 2 колонке */
+}
+.errors-text {
+    grid-column: 3 / 8;    /* Текст с 3 колонки */
+}
+.errors-text p {
+    margin-bottom: 20px;
+}
+
+/* --- ПРИМЕРЫ РАБОТ --- */
+.examples-header {
+    grid-column: 1 / 11;
+}
+
+.examples-grid {
+    grid-column: 1 / 11;
+    display: grid;
+    /* 1 слот = 2 колонки. Всего 5 слотов (10 колонок) */
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 20px;
+    grid-template-rows: repeat(2, 278px); /* 2 строки, высоту подбираем по дизайну */
+    row-gap: 20px;
+}
+.example-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Распределение слотов 5х2 */
+.img-lips {
+    grid-column: 1 / 3;   /* Слот 1 (колонки 1-2), 1-я строка */
+    grid-row: 1 / 2;
+}
+.img-strap {
+    grid-column: 3 / 5;   /* Слот 2 (колонки 3-4), 2-я строка */
+    grid-row: 2 / 3;
+}
+.img-words {
+    grid-column: 5 / 7;   /* Слот 3 (колонки 5-6), 2-я строка */
+    grid-row: 2 / 3;
+}
+.img-hoodie {
+    grid-column: 7 / 11;  /* Слот 4 и 5 (колонки 7-10), занимает обе строки */
+    grid-row: 1 / 3;
+}
+
 /* =============================================
    АДАПТИВ: ПЛАНШЕТЫ (1024px - 800px)
    ============================================= */

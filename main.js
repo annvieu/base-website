@@ -10,6 +10,8 @@ import { AppFooter } from './components/AppFooter.js';
 import { ArticleCard } from './components/ArticleCard.js'
 import { ArticlesSection } from './components/ArticlesSection.js'
 
+import { articlesData } from '../utils/data.js';
+
 
 const rootPath = new URL('.', import.meta.url).pathname;
 
@@ -41,3 +43,45 @@ Object.entries(components).forEach(([tagName, componentClass]) => {
         customElements.define(tagName, componentClass);
     }
 });
+
+if (document.getElementById('article-content')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Получаем ID из URL (например: site.com/article.html?id=1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = parseInt(urlParams.get('id'));
+
+        // 2. Ищем статью в базе данных
+        const article = articlesData.articles.find(a => a.id === articleId);
+
+        // Если статья не найдена — перекидываем обратно на список уроков
+        if (!article) {
+            window.location.href = 'lessons.html';
+            return;
+        }
+
+        // 3. Заполняем текстовые данные
+        document.getElementById('bc-title').textContent = article.title;
+        document.getElementById('article-title').textContent = article.title;
+        document.getElementById('article-time').textContent = `${article.time} мин`;
+        document.getElementById('article-img').src = `../${article.img}`;
+        
+        // Тег сложности
+        const levelEl = document.getElementById('article-level');
+        levelEl.textContent = article.level === 'novice' ? 'для новичков' : 'для продвинутых';
+        levelEl.className = `article-tag ${article.level === 'novice' ? 'tag-novice' : 'tag-pro'}`;
+
+        // 4. Вставляем HTML контент (текст урока)
+        document.getElementById('article-content').innerHTML = article.content;
+
+        // 5. Генерируем карточки материалов
+        const materialsContainer = document.getElementById('materials-container');
+        materialsContainer.innerHTML = article.materials.map(mat => `
+            <div class="material-card">
+                <div class="material-icon-wrapper">
+                    <img src="../${mat.icon}" alt="${mat.name}">
+                </div>
+                <span class="material-name">${mat.name}</span>
+            </div>
+        `).join('');
+    });
+}

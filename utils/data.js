@@ -299,7 +299,31 @@ export const materialsImages = [
 
 export const articlesData = {
     articles: [
-        { title: "ВЫШИВКА НА ОДЕЖДЕ", time: "7", img: "images/lessons/embroidery.png", level: "novice", layout: "horizontal", columnSpan: 4 },
+        { 
+            id: 1,
+            title: "ВЫШИВКА НА ОДЕЖДЕ", 
+            time: "7", 
+            img: "images/lessons/embroidery.png", 
+            level: "novice", 
+            layout: "horizontal", 
+            columnSpan: 4,
+            materials: [
+                { name: "Ткань", icon: "icons/fabric.svg" },
+                { name: "Игла", icon: "icons/needle.svg" },
+                { name: "Мулине", icon: "icons/thread.svg" },
+                { name: "Пяльцы", icon: "icons/hoop.svg" },
+                { name: "Маркер", icon: "icons/marker.svg" }
+            ],
+            content: `
+                <h3>Вступление:</h3>
+                <p>Ручная вышивка — это магия, способная превратить самую простую вещь в уникальную историю. Не нужно быть художником, чтобы начать; достаточно желания и знания нескольких базовых приемов. Этот мастер-класс — ваш проводник в мир текстур и цветов, где игла — это кисть, а ткань — холст.</p>
+                
+                <h3>Пошаговая инструкция:</h3>
+                <h4>Выбор материалов и создание эскиза</h4>
+                <p><strong>Ткань:</strong> Начните с плотных и стабильных тканей, таких как хлопок, лен или деним. Они не растягиваются и не деформируются в процессе, что критично для ровных стежков.</p>
+                <p><strong>Инструменты:</strong> Вам понадобятся пяльцы (деревянные или пластиковые), иглы для вышивания (с тупым кончиком и широким ушком), нитки мулине...</p>
+            `,
+        },
         {},
         { title: "ОСНОВЫ ТАЙ-ДАЙ", time: "7", img: "images/lessons/tiedye.png", level: "novice", layout: "horizontal", columnSpan: 4 },
         {},
