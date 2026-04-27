@@ -17,7 +17,7 @@ export const StudiosSection = ({ title, source }) => {
   return (
     <div className="section-studios">
       <div className="grid-container">
-        <h2 className="${titleStyle}">{title || "ЗАКАЖИ У ПРОФЕССИОНАЛОВ"}</h2>
+        <h2 className={titleStyle}>{title || "ЗАКАЖИ У ПРОФЕССИОНАЛОВ"}</h2>
         <div className="studios-grid">
           {(source === "full" ? fullStudios : mainStudios).map((st) => {
             if (st.isEmpty) {

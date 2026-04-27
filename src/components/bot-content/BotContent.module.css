@@ -193,6 +193,7 @@
 
 .variant > img {
   max-height: 105px;
+  border-radius: 8px;
 }
 
 .variant:hover {
@@ -220,6 +221,10 @@
   opacity: 1;
 }
 
+.step1SelectedStep2 > img {
+  border-radius: 16px;
+}
+
 .step1SelectedStep3 {
   bottom: 200%;
 }
@@ -243,6 +248,7 @@
 .step2Selected > img {
   max-height: 239px;
   width: 100%;
+  border-radius: 8px;
 }
 
 .step2SelectedStep4 {
@@ -272,7 +278,7 @@
   background: #000;
   color: #fff;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -284,12 +290,16 @@
 .final {
   position: absolute;
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 20px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
   bottom: 20px;
   left: 10%;
+}
+
+.lesson > img {
+  border-radius: 8px;
 }
 
 .final_5 {
@@ -485,6 +495,7 @@
 
   .variant > img {
     max-height: 105px;
+    border-radius: 8px;
   }
 
   .variant:hover {
@@ -505,6 +516,10 @@
     pointer-events: none;
     opacity: 0;
     transition: all 0.2s ease-in-out;
+  }
+
+  .step1Selected > img {
+    border-radius: 16px;
   }
 
   .step1SelectedStep2 {
@@ -535,6 +550,7 @@
   .step2Selected > img {
     max-height: 239px;
     width: 100%;
+    border-radius: 16px;
   }
 
   .step2SelectedStep4 {

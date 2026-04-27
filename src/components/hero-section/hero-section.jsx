@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const HeroSection = () => {
   return (
     <div className="hero">
@@ -7,8 +9,12 @@ export const HeroSection = () => {
             наша платформа – это пространство для тех, кто хочет создавать
             уникальные вещи своими руками
           </p>
-          <a className="btn btn-desktop">каталог уроков</a>
-          <a className="btn btn-mobile">к урокам</a>
+          <Link to={"/lessons"} className="btn btn-desktop">
+            каталог уроков
+          </Link>
+          <Link to={"/lessons"} className="btn btn-mobile">
+            к урокам
+          </Link>
         </div>
       </div>
     </div>

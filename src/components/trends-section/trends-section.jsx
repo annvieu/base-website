@@ -2,7 +2,7 @@ import { trendsImages } from "../../assets/data";
 
 export const TrendsSection = () => {
   const imagesHTML = trendsImages.map((img) => (
-    <img src={img.src} className={`tr-img ${img.className}`} key={img} />
+    <img src={img.src} className={`tr-img ${img.class}`} key={img} />
   ));
 
   return (

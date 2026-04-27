@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { materialsImages } from "../../assets/data.js";
 
 export const MaterialsSection = () => {
@@ -6,9 +7,7 @@ export const MaterialsSection = () => {
       key={img}
       src={img.src}
       className={
-        img?.className?.startsWith("mat-big")
-          ? "mat-big"
-          : "m-s " + img.className
+        img?.class?.startsWith("mat-big") ? "mat-big" : "m-s " + img.class
       }
     />
   ));
@@ -21,9 +20,9 @@ export const MaterialsSection = () => {
             Наш чат-бот подскажет необходимую информацию о материалах для вашего
             проекта и поможет выбрать оптимальные варианты
           </p>
-          <a href="#" className="btn">
+          <Link to="/bot" className="btn">
             в чат-бот
-          </a>
+          </Link>
         </div>
         <div className="mat-visual-grid">{images}</div>
       </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const StyleSection = () => {
   return (
     <div className="section-style">
@@ -14,9 +16,9 @@ export const StyleSection = () => {
             и понятные уроки по кастому – от простых техник до профессиональных
             приемов. учись и выделяйся вместе с нами
           </p>
-          <a href="#" className="btn">
+          <Link to="/lessons" className="btn">
             к урокам
-          </a>
+          </Link>
         </div>
       </div>
     </div>
