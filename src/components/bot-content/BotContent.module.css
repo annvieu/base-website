@@ -522,7 +522,7 @@
     border-radius: 16px;
     background-color: #0511ff;
     color: #fff;
-    left: calc(50% - 109px) !important;
+    right: 0;
     bottom: calc(50% - 120px);
     cursor: pointer;
     pointer-events: none;
@@ -551,7 +551,7 @@
     border-radius: 16px;
     background-color: #0511ff;
     color: #fff;
-    right: 50px;
+    right: 0;
     bottom: calc(50% - 120px);
     cursor: pointer;
     pointer-events: none;
@@ -605,7 +605,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 10px;
     opacity: 0;
     pointer-events: none;
