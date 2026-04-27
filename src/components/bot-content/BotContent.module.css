@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 .content {
@@ -318,7 +318,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
+    padding: 0px 10px;
+    padding-bottom: 0px;
   }
 
   .content {
@@ -338,8 +339,8 @@
   }
 
   .button {
-    width: 104px;
-    height: 50px;
+    width: 80px !important;
+    height: 30px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -386,7 +387,7 @@
     border-bottom-left-radius: 0px;
     padding: 20px;
     left: 0%;
-    top: 200px;
+    top: 0px;
     transition: all 0.2s ease-in-out;
     font-size: 12px;
   }
@@ -457,14 +458,16 @@
 
   .message4 {
     background-color: #000;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
+    line-height: 100%;
     color: #fff;
     border-radius: 24px;
     border-bottom-left-radius: 0px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 
   .upper {
@@ -476,10 +479,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 725px;
-    gap: 20px;
+    gap: 10px;
     transition: all 0.2s ease-in-out;
-    bottom: 50px;
-    right: 0px;
+    bottom: 10px;
+    left: 0px;
   }
 
   .variantsStep2 {
@@ -489,18 +492,18 @@
   .variant {
     background: #000;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     gap: 8px;
     transition: all 0.2s ease-in-out;
-    max-height: 180px;
+    max-height: 160px;
   }
 
   .variant > img {
-    max-height: 105px;
+    max-height: 90px;
     border-radius: 8px;
   }
 
@@ -567,12 +570,11 @@
   .variantsDeck {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 725px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     transition: all 0.2s ease-in-out;
-    bottom: 40px;
-    right: 0px;
+    bottom: 5px;
+    left: 0px;
     opacity: 0;
     pointer-events: none;
   }
@@ -592,7 +594,8 @@
     cursor: pointer;
     gap: 8px;
     transition: all 0.2s ease-in-out;
-    max-width: 344px;
+    max-width: 220px;
+    max-height: 220px;
   }
 
   .final {
@@ -600,15 +603,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    bottom: 20px;
-    left: 10%;
+    bottom: 5px;
+    left: 0%;
   }
 
   .final_5 {
     opacity: 1;
     pointer-events: all;
+  }
+
+  .step {
+    font-size: 14px;
   }
 }

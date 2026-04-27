@@ -196,7 +196,7 @@ export const BotContent = () => {
             >
               назад
             </button>
-            <h2>{steps[step]}</h2>
+            <h2 className={styles.step}>{steps[step]}</h2>
           </div>
         </div>
       </div>

@@ -791,7 +791,7 @@ a {
   row-gap: 0;
   margin: 0 auto;
   max-width: 97.5%;
-  padding: 20px 0;
+  padding: 0px 0;
 }
 
 /* ============================================= */
@@ -1037,7 +1037,7 @@ a {
   }
 
   p {
-    font-size: 18px !important;
+    font-size: 15px !important;
     line-height: 100% !important;
   }
 
@@ -1213,7 +1213,6 @@ h2 {
 }
 
 .main-title {
-  font-size: 2.5rem;
   padding: 0 0 20px 0;
 }
 
@@ -1411,6 +1410,9 @@ h2 {
     margin-bottom: 44px;
     padding-top: 100px;
   }
+  .btn {
+    padding: 8px 0px;
+  }
   .trends-left-text {
     grid-column: 1 / 11;
     margin-bottom: 32px;
@@ -1494,6 +1496,7 @@ h2 {
   }
   .btn-mobile {
     display: inline-block;
+    padding: 8px 0px;
   }
 
   h2 {
