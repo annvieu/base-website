@@ -361,7 +361,7 @@
   .chat {
     position: relative;
     width: 100%;
-    min-height: calc(100dvh - 280px);
+    min-height: calc(100dvh - 190px);
     overflow: hidden;
   }
 
@@ -404,20 +404,22 @@
     position: absolute;
     background-color: #000;
     font-size: 14px;
+    line-height: 14px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 16px;
     border-bottom-left-radius: 0px;
-    padding: 20px;
+    padding: 10px;
     left: 0%;
     bottom: -100px;
     transition: all 0.2s ease-in-out;
+    height: 54px;
   }
 
   .message2Step2 {
-    bottom: 60px;
+    bottom: 20px;
   }
 
   .message2Step3 {
@@ -431,7 +433,7 @@
   .message3 {
     position: absolute;
     width: 342px;
-    height: 72px;
+    height: 48px;
     background-color: #000;
     font-size: 18px;
     line-height: 21px;
@@ -449,7 +451,7 @@
   }
 
   .message3Step4 {
-    bottom: 60px;
+    bottom: 20px;
   }
 
   .message3Step5 {
@@ -618,5 +620,9 @@
   .step {
     font-size: 18px !important;
     line-height: 100%;
+  }
+
+  .title {
+    margin-bottom: 0px;
   }
 }

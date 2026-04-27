@@ -1855,6 +1855,10 @@ h2 {
     overflow: hidden;
   }
 
+  .article-card.vertical .article-header {
+    margin-top: 0px;
+  }
+
   .arrow-icon {
     width: 37px;
     height: 37px;
@@ -1879,6 +1883,11 @@ h2 {
   }
   .mat-big {
     display: none;
+  }
+
+  .article-card.vertical {
+    flex-direction: column;
+    grid-row: span 2; /* ← вот оно! 1×2 как в макете */
   }
   /* Размещаем мелкие образцы равномерно в 8 колонках */
   .ms-1 {
