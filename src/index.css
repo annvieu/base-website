@@ -137,7 +137,7 @@ a {
 /* 3. Hero секция */
 .hero {
   height: 100dvh;
-  background: url("images/hero.jpg") no-repeat center center/cover;
+  background: url("/images/hero.jpg") no-repeat center center/cover;
   display: flex;
   align-items: flex-end;
   padding-bottom: 40px;
