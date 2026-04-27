@@ -1749,9 +1749,9 @@ h2 {
     padding-bottom: 24px;
   }
   .trends-visual-grid {
-    grid-column: 1 / 9;
-    grid-template-columns: repeat(8, 0.5fr);
-    gap: 12px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 1fr;
+    aspect-ratio: 8 / 2;
   }
   .tr-1 {
     grid-column: 1 / 4;
