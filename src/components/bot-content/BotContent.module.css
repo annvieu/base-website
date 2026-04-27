@@ -214,6 +214,9 @@
   pointer-events: none;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .step1SelectedStep2 {
@@ -243,6 +246,9 @@
   pointer-events: none;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .step2Selected > img {
