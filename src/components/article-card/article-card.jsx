@@ -20,7 +20,7 @@ export const ArticleCard = ({ item }) => {
           </div>
           <div className="article-header">
             <h3>{title}</h3>
-            <span className="article-tag ${levelClass}">{levelText}</span>
+            <span className={`article-tag ${levelClass}`}>{levelText}</span>
           </div>
         </div>
       </Link>

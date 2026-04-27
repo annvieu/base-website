@@ -999,6 +999,73 @@ a {
   color: #0000ff;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  position: relative;
+  max-width: 960px;
+  gap: 20px;
+}
+
+.studs-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.studs-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.studs-right-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.studs-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.studs-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.studs-right > img {
+  max-width: 255px;
+  max-height: 255px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
 /* ============================================= */
 /* === АДАПТИВ === */
 /* ============================================= */
@@ -1006,7 +1073,86 @@ a {
 @media (max-width: 900px) {
   .lessons-page {
     grid-template-columns: 1fr; /* на мобильных всё в одну колонку */
-    padding: 60px 20px;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 80%;
+    gap: 20px;
+  }
+
+  .studs-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .studs-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .studs-logo > img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .studs-logo > h2 {
+    margin-bottom: 0px;
+  }
+
+  .studs-right-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .studs-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mob {
+    display: none;
+  }
+
+  .studs-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .studs-right > img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
 
   .lessons-sidebar {
@@ -1689,7 +1835,12 @@ h2 {
     flex-direction: column;
     gap: 10px;
   }
-
+  h2 {
+    font-size: 20px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
   .studio-content h3 {
     font-size: 18px;
     letter-spacing: -0.02em;

@@ -477,7 +477,7 @@
   .variants {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     max-width: 725px;
     gap: 10px;
     transition: all 0.2s ease-in-out;
@@ -513,13 +513,13 @@
 
   .step1Selected {
     position: absolute;
-    width: 249px;
-    height: 290px;
+    width: 199px;
+    height: 240px;
     padding: 16px 16px;
     border-radius: 16px;
     background-color: #0511ff;
     color: #fff;
-    right: 50px;
+    left: calc(50% - 109px) !important;
     bottom: calc(50% - 120px);
     cursor: pointer;
     pointer-events: none;
@@ -616,6 +616,7 @@
   }
 
   .step {
-    font-size: 14px;
+    font-size: 18px !important;
+    line-height: 100%;
   }
 }
