@@ -14,7 +14,7 @@ export const TrendsSection = () => {
           модно и как применить новые идеи, чтобы сделать свой стиль уникальным
           и современным
         </p>
-        <div className="trends-visual-grid">${imagesHTML}</div>
+        <div className="trends-visual-grid">{imagesHTML}</div>
       </div>
     </div>
   );

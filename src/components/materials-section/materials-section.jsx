@@ -6,7 +6,9 @@ export const MaterialsSection = () => {
       key={img}
       src={img.src}
       className={
-        img.className.startsWith("mat-big") ? "mat-big" : "m-s " + img.className
+        img?.className?.startsWith("mat-big")
+          ? "mat-big"
+          : "m-s " + img.className
       }
     />
   ));
