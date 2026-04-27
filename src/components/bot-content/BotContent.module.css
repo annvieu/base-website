@@ -377,7 +377,7 @@
   .message1 {
     position: absolute;
     width: 275px;
-    height: 72px;
+    height: 64px;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -385,7 +385,7 @@
     justify-content: center;
     border-radius: 16px;
     border-bottom-left-radius: 0px;
-    padding: 20px;
+    padding: 10px;
     left: 0%;
     top: 0px;
     transition: all 0.2s ease-in-out;
@@ -415,7 +415,7 @@
     left: 0%;
     bottom: -100px;
     transition: all 0.2s ease-in-out;
-    height: 54px;
+    height: 40px;
   }
 
   .message2Step2 {
@@ -423,7 +423,7 @@
   }
 
   .message2Step3 {
-    bottom: 80%;
+    bottom: 90%;
   }
 
   .message2Step4 {
@@ -433,10 +433,10 @@
   .message3 {
     position: absolute;
     width: 342px;
-    height: 48px;
+    height: 40px;
     background-color: #000;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 16px;
     font-weight: 400;
     color: #fff;
     display: flex;
@@ -444,7 +444,7 @@
     justify-content: start;
     border-radius: 16px;
     border-bottom-left-radius: 0px;
-    padding: 20px;
+    padding: 10px;
     left: 0%;
     bottom: -100px;
     transition: all 0.2s ease-in-out;
@@ -460,7 +460,7 @@
 
   .message4 {
     background-color: #000;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 100%;
     color: #fff;
@@ -470,6 +470,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    max-height: 280px;
   }
 
   .upper {
@@ -501,7 +502,7 @@
     cursor: pointer;
     gap: 8px;
     transition: all 0.2s ease-in-out;
-    max-height: 160px;
+    max-height: 120px;
   }
 
   .variant > img {
@@ -596,8 +597,8 @@
     cursor: pointer;
     gap: 8px;
     transition: all 0.2s ease-in-out;
-    max-width: 220px;
-    max-height: 220px;
+    max-width: 180px;
+    max-height: 180px;
   }
 
   .final {
@@ -607,6 +608,7 @@
     align-items: center;
     gap: 10px;
     opacity: 0;
+    pointer-events: none;
     transition: all 0.2s ease-in-out;
     bottom: 5px;
     left: 0%;
