@@ -1,0 +1,592 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer {
+  min-height: 12px;
+}
+
+.footer_act {
+  padding-top: 20px;
+  display: flex;
+  gap: 100px;
+}
+
+.button {
+  width: 104px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #000;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat {
+  position: relative;
+  width: 100%;
+  min-height: calc(100dvh - 280px);
+  overflow: hidden;
+}
+
+.p {
+  max-width: 428px;
+  transition: all 0.2s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.message1 {
+  position: absolute;
+  width: 475px;
+  height: 72px;
+  background-color: #000;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border-bottom-left-radius: 0px;
+  padding: 20px;
+  left: 10%;
+  top: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+.message1Step2 {
+  top: 0px;
+}
+
+.message1Step3 {
+  top: -200px;
+}
+
+.message2 {
+  position: absolute;
+  width: 342px;
+  height: 72px;
+  background-color: #000;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border-bottom-left-radius: 0px;
+  padding: 20px;
+  left: 10%;
+  bottom: -100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.message2Step2 {
+  bottom: 60px;
+}
+
+.message2Step3 {
+  bottom: 80%;
+}
+
+.message2Step4 {
+  bottom: 200%;
+}
+
+.message3 {
+  position: absolute;
+  width: 342px;
+  height: 72px;
+  background-color: #000;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border-bottom-left-radius: 0px;
+  padding: 20px;
+  left: 10%;
+  bottom: -100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.message3Step4 {
+  bottom: 60px;
+}
+
+.message3Step5 {
+  bottom: 84%;
+}
+
+.message4 {
+  background-color: #000;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 24px;
+  border-bottom-left-radius: 0px;
+  padding: 20px;
+  max-width: 686px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  font-weight: 700;
+}
+
+.variants {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 725px;
+  gap: 20px;
+  transition: all 0.2s ease-in-out;
+  bottom: 50px;
+  right: 0px;
+}
+
+.variantsStep2 {
+  bottom: -200px;
+}
+
+.variant {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+  max-height: 180px;
+}
+
+.variant > img {
+  max-height: 105px;
+}
+
+.variant:hover {
+  transform: scale(1.05);
+}
+
+.step1Selected {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  padding: 16px 16px;
+  border-radius: 16px;
+  background-color: #0511ff;
+  color: #fff;
+  right: 200px;
+  bottom: calc(50% - 120px);
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.step1SelectedStep2 {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.step1SelectedStep3 {
+  bottom: 200%;
+}
+
+.step2Selected {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  padding: 16px 16px;
+  border-radius: 16px;
+  background-color: #0511ff;
+  color: #fff;
+  right: 200px;
+  bottom: calc(50% - 120px);
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.step2Selected > img {
+  max-height: 239px;
+  width: 100%;
+}
+
+.step2SelectedStep4 {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.variantsDeck {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 725px;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+  bottom: 40px;
+  right: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.variantsDeckStep3 {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lesson {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+  max-width: 344px;
+}
+
+.final {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  bottom: 20px;
+  left: 10%;
+}
+
+.final_5 {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 900px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer {
+    min-height: 12px;
+  }
+
+  .footer_act {
+    padding-top: 20px;
+    display: flex;
+    gap: 100px;
+  }
+
+  .button {
+    width: 104px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #000;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  .invisible {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .chat {
+    position: relative;
+    width: 100%;
+    min-height: calc(100dvh - 280px);
+    overflow: hidden;
+  }
+
+  .p {
+    max-width: 228px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+
+  .message1 {
+    position: absolute;
+    width: 275px;
+    height: 72px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border-bottom-left-radius: 0px;
+    padding: 20px;
+    left: 0%;
+    top: 200px;
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
+  }
+
+  .message1Step2 {
+    top: 0px;
+  }
+
+  .message1Step3 {
+    top: -200px;
+  }
+
+  .message2 {
+    position: absolute;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border-bottom-left-radius: 0px;
+    padding: 20px;
+    left: 0%;
+    bottom: -100px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .message2Step2 {
+    bottom: 60px;
+  }
+
+  .message2Step3 {
+    bottom: 80%;
+  }
+
+  .message2Step4 {
+    bottom: 200%;
+  }
+
+  .message3 {
+    position: absolute;
+    width: 342px;
+    height: 72px;
+    background-color: #000;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border-bottom-left-radius: 0px;
+    padding: 20px;
+    left: 0%;
+    bottom: -100px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .message3Step4 {
+    bottom: 60px;
+  }
+
+  .message3Step5 {
+    bottom: 2004%;
+  }
+
+  .message4 {
+    background-color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 24px;
+    border-bottom-left-radius: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upper {
+    font-weight: 700;
+  }
+
+  .variants {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 725px;
+    gap: 20px;
+    transition: all 0.2s ease-in-out;
+    bottom: 50px;
+    right: 0px;
+  }
+
+  .variantsStep2 {
+    bottom: -2000px;
+  }
+
+  .variant {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 8px;
+    transition: all 0.2s ease-in-out;
+    max-height: 180px;
+  }
+
+  .variant > img {
+    max-height: 105px;
+  }
+
+  .variant:hover {
+    transform: scale(1.05);
+  }
+
+  .step1Selected {
+    position: absolute;
+    width: 249px;
+    height: 290px;
+    padding: 16px 16px;
+    border-radius: 16px;
+    background-color: #0511ff;
+    color: #fff;
+    right: 50px;
+    bottom: calc(50% - 120px);
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .step1SelectedStep2 {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .step1SelectedStep3 {
+    bottom: 200%;
+  }
+
+  .step2Selected {
+    position: absolute;
+    width: 249px;
+    height: 290px;
+    padding: 16px 16px;
+    border-radius: 16px;
+    background-color: #0511ff;
+    color: #fff;
+    right: 50px;
+    bottom: calc(50% - 120px);
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .step2Selected > img {
+    max-height: 239px;
+    width: 100%;
+  }
+
+  .step2SelectedStep4 {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .variantsDeck {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 725px;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+    bottom: 40px;
+    right: 0px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .variantsDeckStep3 {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .lesson {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 8px;
+    transition: all 0.2s ease-in-out;
+    max-width: 344px;
+  }
+
+  .final {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    bottom: 20px;
+    left: 10%;
+  }
+
+  .final_5 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

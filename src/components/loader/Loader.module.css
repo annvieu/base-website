@@ -1,0 +1,18 @@
+.Loader {
+  min-width: 200px;
+  background-color: #f5f5f5;
+  position: relative;
+  border-radius: 8px;
+  height: 4px;
+}
+
+.LoaderInner {
+  --loader-completed-width: 50%;
+
+  height: 100%;
+  width: var(--loader-completed-width);
+  background-color: #000;
+  border-radius: inherit;
+  text-align: right;
+  transition: width 0.2s linear;
+}

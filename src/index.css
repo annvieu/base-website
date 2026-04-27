@@ -1,0 +1,1966 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #000;
+  /* Основной текст в нижнем регистре */
+  text-transform: lowercase;
+}
+
+/* Сетка на 10 колонок */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px; /* Межколоночный интервал */
+  max-width: 97.5%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 117%;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 2. Шапка */
+.header {
+  position: absolute;
+  width: 100%;
+  top: 26px;
+  z-index: 100;
+}
+
+.header.dark-text {
+  position: unset;
+  padding-bottom: 50px;
+  padding-top: 26px;
+}
+
+.nav-item-1 {
+  grid-column: 1;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+}
+.nav-item-2 {
+  grid-column: 3;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+}
+.nav-item-3 {
+  grid-column: 5;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+}
+.nav-item-4 {
+  grid-column: 7;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+}
+.nav-item-5 {
+  grid-column: 9;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header .grid-container a:hover {
+  color: #e4e4e4;
+}
+
+.header.dark-text .grid-container a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header.dark-text .grid-container a:hover {
+  color: #414141;
+}
+
+/* 3. Hero секция */
+.hero {
+  height: 100dvh;
+  background: url("images/hero.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+
+.hero-content {
+  grid-column: 7 / 11;
+  width: 70%;
+  text-align: left;
+  color: #fff;
+}
+
+.hero-content .btn {
+  width: 46%;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+}
+.btn-mobile {
+  display: none;
+}
+.about-desktop-text {
+  display: inline-block;
+}
+.about-mobile-text {
+  display: none;
+}
+
+.main-title {
+  grid-column: 1 / 11;
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+/* 4. Создавай свой стиль */
+.section-style {
+  padding-top: 132px;
+}
+.style-img {
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+  width: 100%;
+}
+.style-title {
+  grid-column: 5 / 11;
+  grid-row: 1;
+  align-self: start;
+}
+.style-desc {
+  grid-column: 7 / 11;
+  grid-row: 2;
+  align-self: end;
+  width: 90%;
+}
+.style-desc .btn {
+  width: 30%;
+  margin-top: 20px;
+}
+
+/* 5. Вдохновись трендами */
+.section-trends {
+  padding-top: 132px;
+}
+.trends-title {
+  grid-column: 3 / 11;
+  padding-bottom: 52px;
+}
+.trends-text {
+  grid-column: 5 / 11;
+  padding-bottom: 32px;
+  width: 60%;
+}
+
+/* 6. Сетка трендов (10 столбцов) */
+.trends-visual-grid {
+  grid-column: 1 / 11;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.tr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tr-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.tr-2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.tr-big {
+  grid-column: 7 / 11;
+  grid-row: 1 / 4;
+  aspect-ratio: 1 / 1;
+}
+.tr-3 {
+  grid-column: 1 / 3;
+  grid-row: 3 / 3;
+  aspect-ratio: 1 / 1;
+}
+.tr-4 {
+  grid-column: 5 / 7;
+  grid-row: 3 / 3;
+  aspect-ratio: 1 / 1;
+}
+
+/* 7. Присоединяйся */
+.join-section {
+  padding-top: 132px;
+}
+.join-image {
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+  width: 100%;
+}
+.join-title {
+  grid-column: 5 / 11;
+  grid-row: 1;
+  width: 100%;
+}
+.join-info {
+  grid-column: 7 / 11;
+  grid-row: 2;
+  align-self: end;
+  width: 73%;
+}
+.tg-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+/* 8. Закажи у профессионалов */
+.studios-grid {
+  grid-column: 1 / 11;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки на десктопе */
+  column-gap: 20px;
+  row-gap: 60px;
+}
+
+.studios-title {
+  grid-column: 1 / 11;
+  padding-top: 132px;
+  padding-bottom: 60px;
+}
+
+.studio-item {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.studio-img-wrapper {
+  background: #fff;
+  aspect-ratio: 1 / 1;
+
+  width: 40%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.studio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.studio-img.dark {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.studio-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.studio-content h3 {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.arrow-icon {
+  width: 47.62px;
+  height: 47.62px;
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0;
+}
+
+/* 9. Подбери материалы */
+.section-materials {
+  padding-top: 132px;
+}
+.mat-title {
+  grid-column: 3 / 11;
+  padding-bottom: 52px;
+}
+.mat-info {
+  grid-column: 5 / 11;
+  padding-bottom: 32px;
+  width: 55%;
+}
+.mat-info .btn {
+  margin-top: 20px;
+  width: 40%;
+} /* Кнопка в одну колонку */
+
+.mat-visual-grid {
+  grid-column: 1 / 11;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+  gap: 15px;
+}
+
+.mat-big {
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.m-s {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Позиции мелких фото по вашему списку */
+.ms-1 {
+  grid-column: 6;
+  grid-row: 1;
+}
+.ms-2 {
+  grid-column: 7;
+  grid-row: 1;
+}
+.ms-3 {
+  grid-column: 6;
+  grid-row: 2;
+}
+.ms-4 {
+  grid-column: 9;
+  grid-row: 2;
+}
+.ms-5 {
+  grid-column: 4;
+  grid-row: 3;
+}
+.ms-6 {
+  grid-column: 8;
+  grid-row: 3;
+}
+.ms-7 {
+  grid-column: 9;
+  grid-row: 3;
+}
+.ms-8 {
+  grid-column: 10;
+  grid-row: 3;
+}
+
+/* 10. Футер */
+.footer {
+  padding: 132px 0 40px;
+  align-items: center;
+}
+.f-1 {
+  grid-column: 1;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+}
+.f-1 img {
+  display: block;
+  width: 47px;
+  height: auto;
+}
+.f-2 {
+  grid-column: 2;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  align-self: center;
+}
+.f-3 {
+  grid-column: 3;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  align-self: center;
+}
+.f-8 {
+  grid-column: 8 / 10;
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+  color: #000;
+  align-self: center;
+}
+.f-10 {
+  grid-column: 10;
+  align-self: center;
+}
+.f-8,
+.f-10 {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.trends-left-title {
+  grid-column: 1 / 11;
+  margin-bottom: 50px;
+  padding-top: 120px;
+}
+.trends-right-title {
+  grid-column: 5 / 11;
+  margin-bottom: 50px;
+  padding-top: 120px;
+}
+.trends-left-text {
+  grid-column: 1 / 11;
+  margin-bottom: 32px;
+  width: 50%;
+}
+.trends-right-text {
+  grid-column: 6 / 11;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.trends-fittings-title {
+  grid-column: 5 / 11;
+  margin-bottom: 50px;
+}
+
+.trends-gallery {
+  padding-bottom: 152px;
+}
+.trends-img-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.trends-img-2 {
+  grid-column: 3 / 7;
+  grid-row: 1 / 4;
+  aspect-ratio: 1 / 1;
+}
+.trends-img-3 {
+  grid-column: 7 / 9;
+  grid-row: 3 / 3;
+  aspect-ratio: 1 / 1;
+}
+.trends-img-4 {
+  grid-column: 9 / 11;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+
+.paints-img-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.paints-img-2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.paints-img-3 {
+  grid-column: 7 / 11;
+  grid-row: 1 / 4;
+  aspect-ratio: 1 / 1;
+}
+
+.stickers-img-1 {
+  grid-column: 1 / 3;
+  grid-row: 3 / 3;
+  aspect-ratio: 1 / 1;
+}
+.stickers-img-2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.stickers-img-3 {
+  grid-column: 5 / 9;
+  grid-row: 1 / 4;
+  aspect-ratio: 1 / 1;
+}
+.stickers-img-4 {
+  grid-column: 9 / 11;
+  grid-row: 3 / 3;
+  aspect-ratio: 1 / 1;
+}
+
+.ab-img-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.ab-img-2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  aspect-ratio: 1 / 1;
+}
+.ab-img-3 {
+  grid-column: 5 / 7;
+  grid-row: 3 / 3;
+  aspect-ratio: 1 / 1;
+}
+.ab-img-4 {
+  grid-column: 7 / 11;
+  grid-row: 1 / 4;
+  aspect-ratio: 1 / 1;
+}
+.about-right-title {
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  grid-column: 5 / 11;
+  padding-bottom: 20px;
+  padding-top: 152px;
+}
+.about-right-text {
+  line-height: 117%;
+  letter-spacing: -0.02em;
+  grid-column: 6 / 11;
+  padding: 32px 0;
+}
+.about-why-text {
+  line-height: 117%;
+  letter-spacing: -0.02em;
+  grid-column: 2 / 11;
+  padding-left: 20px;
+  width: 65%;
+}
+
+.about-bold p {
+  font-weight: 500;
+  font-size: 20px;
+  font-style: bold;
+}
+
+/* "ПОЧЕМУ МЫ ЭТО ДЕЛАЕМ" */
+.about-why.dark-section {
+  background-color: #000000;
+  padding: 52px 149px;
+  margin: 120px 0 0;
+}
+
+.about-why.dark-section .white-text {
+  color: #ffffff;
+}
+
+/* Делаем курсор-поинтер для карточки, чтобы было понятно, что она кликабельна */
+.studio-item {
+  cursor: pointer;
+}
+
+/* Отключаем скроллбар в окне */
+.studio-modal-content {
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.studio-modal-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Фон (Overlay) */
+.studio-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+/* Контейнер окна */
+.studio-modal-content {
+  width: 100%;
+  background: #fff;
+  max-width: 980px;
+  height: 95vh;
+  position: relative;
+  overflow-y: auto;
+  display: grid;
+  /* Десктопная сетка: 7 колонок */
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+/* Кнопка закрытия с отступом */
+.modal-close-btn {
+  position: absolute;
+  /* Теперь она не прижата к углу */
+  top: 20px;
+  right: 20px;
+  width: 47px;
+  height: 47px;
+  background: #eeeeee;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+/* Левая часть (3 колонки) */
+.modal-left {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-logo-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-logo-wrapper.dark img {
+  filter: none;
+}
+
+.modal-left h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 auto 0; /* Отталкивает контакты вниз */
+}
+
+.modal-info-footer {
+  margin-top: 40px;
+}
+
+.modal-contacts {
+  margin-bottom: 20px;
+}
+
+.modal-contacts p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 117%;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.modal-contacts a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 117%;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.modal-external-link {
+  width: 50px;
+  height: 50px;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Правая часть (4 колонки) */
+.modal-right {
+  grid-column: span 4;
+}
+
+.modal-right h3 {
+  font-size: 36px;
+  margin: 0 0 24px 0;
+}
+
+.portfolio-grid {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.studio-item {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.studio-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Пустая карточка в сетке останется просто блоком без курсора и эффектов */
+.studio-item {
+  cursor: default;
+}
+
+/* ============================================= */
+/* === СТРАНИЦА УРОКОВ (lessons-page) — 10-колоночная система на ВСЮ страницу === */
+/* ============================================= */
+
+.lessons-page {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px; /* точно как ты просил */
+  row-gap: 0;
+  margin: 0 auto;
+  max-width: 97.5%;
+  padding: 20px 0;
+}
+
+/* ============================================= */
+/* === САЙДБАР — первые 2 столбца === */
+/* ============================================= */
+
+.lessons-sidebar {
+  grid-column: 1 / 3; /* занимает столбцы 1–2 */
+  width: auto;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+.lessons-sidebar h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.lessons-filters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lessons-filters li {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+}
+
+.lessons-filters li:hover {
+  color: #ff00ff;
+}
+
+.lessons-filters .active {
+  font-weight: bold;
+}
+
+.lessons-filters .filter-item {
+  color: #ff00ff;
+}
+
+.filter-item .checkbox {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ff00ff;
+  display: inline-block;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Закрашиваем чекбокс при активации */
+.filter-item.active .checkbox {
+  background-color: #ff00ff;
+}
+
+/* ============================================= */
+/* === КОНТЕНТ — столбцы 3–10 === */
+/* ============================================= */
+
+.lessons-content {
+  grid-column: 3 / 11; /* занимает столбцы 3–10 (8 колонок) */
+}
+
+/* ============================================= */
+/* === СЕТКА СТАТЕЙ — 2 колонки контента (3-6 и 7-10) === */
+/* ============================================= */
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ровно 2 колонки контента */
+  column-gap: 20px; /* расстояние между колонками 3-6 и 7-10 */
+  row-gap: 20px;
+  grid-auto-flow: row; /* ПОСТРОЧНАЯ заливка (как ты просил) */
+}
+
+/* ============================================= */
+/* === КАРТОЧКИ — малые (1×1) и большие (1×2) === */
+/* ============================================= */
+
+.article-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  overflow: hidden;
+  height: auto;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+
+.time-text {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+}
+
+/* ГОРИЗОНТАЛЬНАЯ (малая — 1 строка) */
+.article-card.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.article-card.horizontal .article-img-wrapper {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.article-card.horizontal .article-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Расталкивает элементы: время — вверх, текст — вниз */
+  align-self: stretch;
+}
+
+.article-text-bottom.article-text-bottom h3 {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+/* ВЕРТИКАЛЬНАЯ (большая — занимает 2 строки в своей колонке) */
+.article-card.vertical {
+  flex-direction: column;
+  grid-row: span 2; /* ← вот оно! 1×2 как в макете */
+}
+
+.article-card.vertical .article-img-wrapper {
+  width: 100%;
+}
+
+.article-card.vertical .article-header {
+  margin-top: 60px;
+}
+
+.article-card.vertical .article-header h3 {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.article-card.vertical .article-footer {
+  margin-top: auto;
+}
+
+/* ============================================= */
+/* === ВНУТРЕННИЕ ЭЛЕМЕНТЫ === */
+/* ============================================= */
+
+.article-img-wrapper img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.article-card h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.book-icon {
+  width: 19px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.article-tag {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+}
+
+.tag-novice {
+  color: #ff00ff;
+}
+.tag-pro {
+  color: #0000ff;
+}
+
+/* ============================================= */
+/* === АДАПТИВ === */
+/* ============================================= */
+
+@media (max-width: 900px) {
+  .lessons-page {
+    grid-template-columns: 1fr; /* на мобильных всё в одну колонку */
+    padding: 60px 20px;
+  }
+
+  .lessons-sidebar {
+    grid-column: 1 / -1;
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .lessons-content {
+    grid-column: 1 / -1;
+  }
+
+  .article-page {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .main-title {
+    padding-bottom: 0px !important;
+  }
+
+  .hero-tools {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .hero-intro {
+    padding-left: 30%;
+  }
+
+  p {
+    font-size: 18px !important;
+    line-height: 100% !important;
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .article-card.vertical {
+    grid-row: span 1; /* на мобильных большие не растягиваются */
+  }
+
+  .article-card.horizontal {
+    flex-direction: column;
+  }
+
+  .article-card.horizontal .article-img-wrapper,
+  .article-card.horizontal .article-info {
+    width: 100%;
+  }
+}
+
+/* ============================================= */
+/* === МЕЛОЧИ === */
+/* ============================================= */
+
+.article-card:hover {
+  transform: translateY(-8px) scale(0.96);
+}
+
+/* Структура страницы статьи */
+.single-article-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.breadcrumbs {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.breadcrumbs a {
+  color: #ff00ff;
+  text-decoration: none;
+}
+
+.article-hero-header {
+  margin-bottom: 40px;
+}
+
+.article-hero-header .article-meta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.article-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+/* Секция материалов */
+.materials-section {
+  margin-bottom: 60px;
+}
+
+.materials-section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.materials-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.material-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(20% - 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff00ff;
+}
+
+.material-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border: 1px solid #ff00ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Дополнения для корректного отображения карточек (было полностью отсутствовало) */
+.material-icon-wrapper img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* для SVG-иконок — белый цвет */
+}
+
+.material-card p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Текст статьи */
+.article-body h3 {
+  color: #ff00ff;
+  margin: 40px 0 20px;
+  font-size: 22px;
+}
+
+.article-body p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.article-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/*----------*/
+
+/* --- ОСНОВНАЯ СЕТКА (10 КОЛОНОК) --- */
+.article-page {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px;
+  row-gap: 80px; /* Отступы между логическими блоками по вертикали */
+  max-width: 100%;
+  padding: 0px 1.3%;
+  align-items: start;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  padding: 0 0 20px 0;
+}
+
+.tag-novice {
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+/* --- ВЕРХНИЙ БЛОК (HERO) --- */
+.hero-header {
+  grid-column: 1 / 6; /* С 1 по 5 колонку */
+  grid-row: 1;
+}
+
+.hero-image {
+  grid-column: 7 / 11; /* Последние 4 колонки: 7, 8, 9, 10 */
+  grid-row: 1 / 3; /* Тянется вниз, чтобы стоять рядом с заголовком и инструментами */
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-tools {
+  grid-column: 1 / 6; /* Инструменты занимают с 1 по 5 колонку */
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* Ровно 5 колонок внутри, каждая под свой инструмент */
+  gap: 20px;
+  align-self: end;
+}
+.tool-card {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.tool-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.hero-intro {
+  grid-column: 6 / 11; /* Текст начинается с 6 колонки по 10 */
+  grid-row: 3;
+}
+
+/* --- СТАНДАРТНЫЙ БЛОК КОНТЕНТА --- */
+.content-image {
+  grid-column: 1 / 6; /* Картинки слева: 1-5 колонки */
+}
+.content-image img {
+  width: 100%;
+  display: block;
+}
+
+.content-text {
+  grid-column: 6 / 11; /* Текст справа: 6-10 колонки */
+}
+.content-text p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* --- БЛОК: СОВЕТ --- */
+.advice-title {
+  grid-column: 2 / 3; /* Заголовок "Совет" строго во 2 колонке */
+}
+.advice-text {
+  grid-column: 3 / 8; /* Текст начинается с 3 колонки (занял примерно до 7-8) */
+}
+
+/* --- БЛОК: ТИПИЧНЫЕ ОШИБКИ (Черный фон) --- */
+.errors-block {
+  grid-column: 1 / 11; /* Растягиваем на все 10 колонок */
+  background: #000;
+  color: #fff;
+  padding: 60px 0;
+
+  /* Создаем такую же 10-колоночную сетку внутри черного блока */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px;
+}
+.errors-title {
+  grid-column: 2 / 3; /* Заголовок во 2 колонке */
+}
+.errors-text {
+  grid-column: 3 / 8; /* Текст с 3 колонки */
+}
+.errors-text p {
+  margin-bottom: 20px;
+}
+
+/* --- ПРИМЕРЫ РАБОТ --- */
+.examples-block {
+  grid-column: 1 / 11;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px;
+}
+
+.examples-header {
+  grid-column: 1 / 11;
+}
+
+.examples-grid {
+  grid-column: 1 / 11;
+  display: grid;
+  /* 1 слот = 2 колонки. Всего 5 слотов (10 колонок) */
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 20px;
+  grid-template-rows: repeat(
+    2,
+    278px
+  ); /* 2 строки, высоту подбираем по дизайну */
+  row-gap: 20px;
+}
+.example-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Распределение слотов 5х2 */
+.img-lips {
+  grid-column: 1 / 3; /* Слот 1 (колонки 1-2), 1-я строка */
+  grid-row: 1 / 2;
+}
+.img-strap {
+  grid-column: 3 / 5; /* Слот 2 (колонки 3-4), 2-я строка */
+  grid-row: 2 / 3;
+}
+.img-words {
+  grid-column: 5 / 7; /* Слот 3 (колонки 5-6), 2-я строка */
+  grid-row: 2 / 3;
+}
+.img-hoodie {
+  grid-column: 7 / 11; /* Слот 4 и 5 (колонки 7-10), занимает обе строки */
+  grid-row: 1 / 3;
+}
+
+/* =============================================
+   АДАПТИВ: ПЛАНШЕТЫ (1024px - 800px)
+   ============================================= */
+@media (max-width: 1024px) {
+  .grid-container {
+    column-gap: 14px; /* Уменьшаем отступы, чтобы избежать "белой полосы" */
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  a {
+    font-size: 15px;
+  }
+  .hero-content {
+    grid-column: 6 / 11;
+  }
+  .f-8,
+  .f-10 {
+    font-size: 12px;
+  }
+
+  .arrow-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .trends-gallery {
+    padding-bottom: 100px;
+  }
+  .trends-left-title {
+    grid-column: 1 / 11;
+    margin-bottom: 44px;
+    padding-top: 100px;
+  }
+  .trends-right-title {
+    grid-column: 5 / 11;
+    margin-bottom: 44px;
+    padding-top: 100px;
+  }
+  .trends-left-text {
+    grid-column: 1 / 11;
+    margin-bottom: 32px;
+    width: 50%;
+  }
+  .trends-right-text {
+    grid-column: 6 / 11;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .about-right-title {
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    padding-bottom: 20px;
+    padding-top: 108px;
+  }
+  .about-right-text {
+    letter-spacing: -0.02em;
+    padding: 24px 0;
+  }
+  .about-why-text {
+    letter-spacing: -0.02em;
+    width: 50%;
+  }
+  .about-bold p {
+    font-weight: 500;
+    font-size: 18px;
+    font-style: bold;
+  }
+
+  /* "ПОЧЕМУ МЫ ЭТО ДЕЛАЕМ" */
+  .about-why.dark-section {
+    padding: 44px 101px;
+    margin: 108px 0 0;
+  }
+
+  .studio-modal-content {
+    max-width: 725px;
+    height: 75vh;
+  }
+  .modal-close-btn {
+    width: 43px;
+    height: 43px;
+  }
+  .modal-external-link {
+    width: 43px;
+    height: 43px;
+  }
+  .modal-left h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .modal-contacts p {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+  }
+  .modal-contacts a {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* =============================================
+   АДАПТИВ: ТЕЛЕФОНЫ (760px - iPhone)
+   ============================================= */
+@media (max-width: 800px) {
+  /* Переключение на 8 колонок */
+  .grid-container {
+    grid-template-columns: repeat(8, 0.5fr);
+    column-gap: 12px;
+  }
+
+  .btn-desktop {
+    display: none;
+  }
+  .btn-mobile {
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: normal;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  .examples-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Отступы секций на мобильном */
+  .section-style,
+  .section-trends,
+  .join-section,
+  .section-materials,
+  .footer {
+    padding-top: 100px;
+  }
+
+  .main-title {
+    grid-column: 1 / 11;
+    padding-top: 0;
+    padding-bottom: 36px;
+  }
+
+  /* Шапка на мобильном */
+  .header {
+    top: 20px;
+  }
+  .nav-item-1 {
+    grid-column: 1 / 4;
+  }
+  .nav-item-2 {
+    grid-column: 6;
+  }
+  .nav-item-3 {
+    grid-column: 7;
+  }
+  .nav-item-4 {
+    grid-column: 8;
+  }
+  .nav-item-5 {
+    grid-column: 9;
+  }
+  .header a {
+    padding-left: 15px;
+  }
+
+  /* Hero */
+  .hero {
+    background-position: 38% center;
+    height: 100vh;
+    padding-bottom: 24px;
+  }
+  .hero-content {
+    grid-column: 4 / 9;
+    width: 103%;
+  }
+  .hero-content .btn {
+    width: 60%;
+  }
+
+  /* Создавай стиль (Rearrangement) */
+  .style-img {
+    grid-column: 1 / 9;
+    grid-row: 1;
+    padding-bottom: 24px;
+  }
+  .style-title {
+    grid-column: 1 / 9;
+    grid-row: 2;
+    padding-bottom: 36px;
+  }
+  .style-desc {
+    grid-column: 2 / 9;
+    grid-row: 3;
+    width: 94%;
+  }
+  .style-desc .btn {
+    width: 40%;
+  }
+
+  /* Тренды (Grid 8 cols) */
+  .trends-title {
+    grid-column: 1 / 9;
+    padding-bottom: 36px;
+  }
+  .trends-text {
+    grid-column: 2 / 9;
+    width: 94%;
+    padding-bottom: 24px;
+  }
+  .trends-visual-grid {
+    grid-column: 1 / 9;
+    grid-template-columns: repeat(8, 0.5fr);
+    grid-template-rows: 1 / 3;
+    gap: 12px;
+  }
+  .tr-1 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+  }
+  .tr-2 {
+    grid-column: 4 / 7;
+    grid-row: 1;
+  }
+  .tr-3 {
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+  .tr-4 {
+    grid-column: 7 / 9;
+    grid-row: 2;
+  }
+  .tr-big {
+    display: none;
+  }
+
+  /* Присоединяйся */
+  .join-image {
+    grid-column: 1 / 9;
+    grid-row: 1;
+    padding-bottom: 24px;
+  }
+  .join-title {
+    grid-column: 1 / 9;
+    grid-row: 2;
+    padding-bottom: 36px;
+  }
+  .join-info {
+    grid-column: 3 / 9;
+    grid-row: 3;
+    width: 100%;
+  }
+
+  /* Студии */
+  .studios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 10px;
+    align-items: stretch;
+    align-items: center;
+  }
+
+  .studios-title {
+    padding-top: 100px;
+    padding-bottom: 36px;
+    width: 80%;
+  }
+
+  .studio-item {
+    gap: 20px;
+  }
+
+  .studio-item {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .studio-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .studio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .studio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .studio-content h3 {
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .studio-content p {
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .arrow-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .mat-title {
+    grid-column: 1 / 9;
+    padding-bottom: 18px;
+  }
+  .mat-info {
+    grid-column: 2 / 9;
+    width: 95%;
+  }
+  .mat-info .btn {
+    width: 35%;
+  }
+  .mat-visual-grid {
+    grid-column: 1 / 9;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    gap: 8px;
+  }
+  .mat-big {
+    display: none;
+  }
+  /* Размещаем мелкие образцы равномерно в 8 колонках */
+  .ms-1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .ms-2 {
+    grid-column: 3 / 5;
+    grid-row: 1;
+  }
+  .ms-3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  .ms-4 {
+    grid-column: 7 / 9;
+    grid-row: 1;
+  }
+  .ms-5 {
+    grid-column: 3 / 5;
+    grid-row: 3;
+  }
+  .ms-6 {
+    grid-column: 7 / 9;
+    grid-row: 3;
+  }
+  .ms-7 {
+    grid-column: 5 / 7;
+    grid-row: 2;
+  }
+  .ms-8 {
+    grid-column: 7 / 9;
+    grid-row: 2;
+  }
+
+  .trends-left-title {
+    grid-column: 1 / 9;
+    margin-bottom: 30px;
+    padding-top: 73px;
+  }
+  .trends-right-title {
+    grid-column: 1 / 9;
+    margin-bottom: 30px;
+    padding-top: 73px;
+  }
+  .trends-left-text {
+    grid-column: 1 / 9;
+    margin-bottom: 32px;
+    width: 75%;
+  }
+  .trends-right-text {
+    grid-column: 3 / 9;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .trends-gallery {
+    padding-bottom: 40px;
+  }
+
+  .trends-img-1 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    aspect-ratio: 1 / 1;
+  }
+  .trends-img-2 {
+    grid-column: 4 / 9;
+    grid-row: 1/3;
+    aspect-ratio: 1 / 1;
+  }
+  .trends-img-3 {
+    display: none;
+  }
+  .trends-img-4 {
+    display: none;
+  }
+
+  .paints-img-1 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    aspect-ratio: 1 / 1;
+  }
+  .paints-img-2 {
+    grid-column: 4 / 7;
+    grid-row: 1;
+    aspect-ratio: 1 / 1;
+  }
+  .paints-img-3 {
+    grid-column: 7 / 9;
+    grid-row: 1 / 3;
+    aspect-ratio: 1 / 1;
+  }
+
+  .stickers-img-1 {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    aspect-ratio: 1 / 1;
+  }
+  .stickers-img-2 {
+    grid-column: 4 / 7;
+    grid-row: 1;
+    aspect-ratio: 1 / 1;
+  }
+  .stickers-img-3 {
+    grid-column: 7 / 9;
+    grid-row: 1 / 3;
+    aspect-ratio: 1 / 1;
+  }
+  .stickers-img-4 {
+    display: none;
+  }
+
+  .ab-img-1 {
+    grid-column: 7 / 9;
+    grid-row: 1 / 2;
+    aspect-ratio: 1 / 1;
+  }
+  .ab-img-2 {
+    display: none;
+  }
+  .ab-img-3 {
+    display: none;
+  }
+  .ab-img-4 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 4;
+    aspect-ratio: 1 / 1;
+  }
+  .about-right-title {
+    grid-column: 1 / 9;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    padding-bottom: 36px;
+    padding-top: 74px;
+  }
+  .about-right-text {
+    grid-column: 3 / 9;
+    letter-spacing: -0.02em;
+    padding: 16px 0;
+  }
+  .about-why-text {
+    letter-spacing: -0.02em;
+    padding-left: 0px;
+    width: 100%;
+  }
+  .about-desktop-text {
+    display: none;
+  }
+  .about-mobile-text {
+    display: inline-block;
+  }
+
+  .about-bold p {
+    font-weight: 500;
+    font-size: 15px;
+    font-style: bold;
+    width: 100%;
+  }
+
+  /* "ПОЧЕМУ МЫ ЭТО ДЕЛАЕМ" */
+  .about-why.dark-section {
+    padding: 36px 0px 36px 10px;
+    margin: 74px 0 0 0;
+  }
+
+  /* Футер */
+  .footer .grid-container {
+    row-gap: 20px;
+  }
+  .f-1 {
+    grid-column: 1 / 2;
+  }
+  .f-2,
+  .f-8 {
+    grid-column: 3 / 5;
+    align-self: flex-start;
+  }
+  .f-3,
+  .f-10 {
+    grid-column: 6 / 9;
+    align-self: flex-start;
+  }
+  .f-8,
+  .f-10 {
+    font-size: 10px;
+  }
+
+  .studio-modal-content {
+    max-width: 500px;
+
+    height: 94vh;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 10px;
+    display: flex; /* Переключаем на поток для мобилки */
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+  }
+  .modal-left h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .modal-contacts p {
+    font-size: 12px;
+  }
+  .modal-contacts a {
+    font-size: 12px;
+  }
+  .modal-contacts {
+    padding-top: 10px;
+  }
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+  }
+  .modal-external-link {
+    width: 38px;
+    height: 38px;
+  }
+  .modal-left,
+  .modal-right {
+    grid-column: span 8;
+    width: 100%;
+  }
+  .studio-modal-overlay {
+    padding: 46px;
+  }
+  .modal-info-footer {
+    margin-top: 24px;
+    order: 3; /* Контакты в самый низ */
+  }
+  .empty-slot {
+    display: none; /* Они больше не занимают место */
+  }
+}
