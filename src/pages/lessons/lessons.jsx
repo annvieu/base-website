@@ -30,7 +30,7 @@ export const LessonsPage = () => {
               className={`filter-item pro ${active.includes("pro") ? "active" : ""}`}
               onClick={() => filterAtticles("pro")}
             >
-              <span className="checkbox"></span> для продвинутых
+              <span className="checkbox pro-check"></span> для продвинутых
             </li>
           </ul>
         </aside>

@@ -863,6 +863,13 @@ a {
   background-color: #ff00ff;
 }
 
+.filter-item.active .pro-check {
+  background-color: #0000ff !important;
+}
+
+.filter-item .pro-check {
+  border: 1px solid #0000ff !important;
+}
 /* ============================================= */
 /* === КОНТЕНТ — столбцы 3–10 === */
 /* ============================================= */
@@ -1000,6 +1007,10 @@ a {
 }
 .tag-pro {
   color: #0000ff;
+}
+
+.pro {
+  color: #0000ff !important;
 }
 
 .modal-overlay {

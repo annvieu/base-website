@@ -17,7 +17,11 @@ export const LessonPage = () => {
           <div className={styles.hero_left}>
             <div className={styles.hero_title}>
               <h2>{lesson.title}</h2>
-              <span className={styles.hero_level}>{lesson.level}</span>
+              <span
+                className={`${styles.hero_level} ${lesson.level === "для продвинутых" ? styles.hero_level_pro : ""}`}
+              >
+                {lesson.level}
+              </span>
             </div>
             <img
               src={lesson.heroImage}

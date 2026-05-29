@@ -36,6 +36,10 @@
   gap: 20px;
 }
 
+.hero_level_pro {
+  color: #0000ff;
+}
+
 .hero_img_mobile {
   display: none;
 }
