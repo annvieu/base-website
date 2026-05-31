@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/main/main";
@@ -20,6 +19,7 @@ function App() {
         <Route path="/trends" element={<TrendsPage />}></Route>
         <Route path="/lesson" element={<LessonPage />}></Route>
         <Route path="/bot" element={<BotPage />}></Route>
+        <Route path="*" element={<MainPage />}></Route>
       </Routes>
     </>
   );

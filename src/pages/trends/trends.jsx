@@ -4,7 +4,7 @@ import { Header } from "../../components/header/header";
 export const TrendsPage = () => {
   return (
     <>
-      <Header theme="dark" />
+      <Header />
 
       <main className="trends-page-content">
         <section className="trends">

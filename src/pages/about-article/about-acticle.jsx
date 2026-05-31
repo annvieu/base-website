@@ -4,7 +4,7 @@ import { Footer } from "../../components/footer/footer";
 export const AboutPage = () => {
   return (
     <>
-      <Header theme="dark" />
+      <Header />
 
       <main className="about-page-content">
         <section className="about-hero">

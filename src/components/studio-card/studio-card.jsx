@@ -4,8 +4,6 @@ import { fullStudios } from "../../assets/data";
 export const StudioCard = ({ item, isDark }) => {
   const { title, desc, img, link, city, email, website, portfolio } = item;
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
-
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
   return (

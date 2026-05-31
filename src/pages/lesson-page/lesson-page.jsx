@@ -10,7 +10,7 @@ export const LessonPage = () => {
   const lesson = lessons.find((lesson) => lesson.id === id) || {};
   return (
     <>
-      <Header theme="dark" />
+      <Header />
 
       <main className={styles.page}>
         <div className={styles.hero}>

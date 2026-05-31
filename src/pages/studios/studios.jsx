@@ -5,7 +5,7 @@ import { StudiosSection } from "../../components/studios-section/studios-section
 export const StudiosPage = () => {
   return (
     <>
-      <Header theme="dark" />
+      <Header />
 
       <StudiosSection title="СТУДИИ" source="full" />
 

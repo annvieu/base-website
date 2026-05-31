@@ -14,7 +14,7 @@ export const LessonsPage = () => {
   };
   return (
     <>
-      <Header theme="dark" />
+      <Header />
       <main className="lessons-page">
         <aside className="lessons-sidebar">
           <h2 className="main-title">УРОКИ</h2>
