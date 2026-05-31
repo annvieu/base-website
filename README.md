@@ -1,18 +1,33 @@
-# React + Vite
+# Base Website 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современное веб-приложение, разработанное на стеке **React + Vite**. Проект ориентирован на максимальную производительность, чистоту кода и отличный пользовательский опыт.
 
-Currently, two official plugins are available:
+🔗 **Живой проект:** [https://base-website-five.vercel.app/](https://base-website-five.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Особенности проекта
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- ⚡️ **Vite**: Сверхбыстрая горячая перезагрузка (HMR).
+- ⚛️ **React Compiler**: Включена поддержка экспериментального компилятора React для автоматической оптимизации рендеринга.
+- 🎨 **Typography**: Интегрирован современный шрифт **Inter** с полной поддержкой кириллицы.
+- 📊 **Analytics**: Подключена Яндекс.Метрика для глубокого анализа пользовательского опыта.
+- 📏 **Linting**: Настроен ESLint для поддержания высокого качества кода.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠 Технологический стек
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React
+- **Build Tool**: Vite
+- **Deployment**: Vercel
+- **Styling**: CSS3 / CSS Modules
+- **Analytics**: Yandex.Metrika
+
+---
+
+## 🚀 Инструкция по запуску
+
+Для локального запуска проекта выполните следующие шаги:
+
+### 1. Клонирование репозитория
